@@ -1,0 +1,57 @@
+# =========================
+# Xcode
+# =========================
+# Xcode workspace
+*.xcworkspace
+
+# User-specific Xcode files
+*.xcuserstate
+*.moved-aside
+*.xcuserdatad
+xcuserdata/
+
+# Build generated files
+DerivedData/
+build/
+
+# Xcode Index
+*.xccheckout
+*.xcscmblueprint
+
+# =========================
+# CocoaPods
+# =========================
+Pods/
+
+# =========================
+# Carthage
+# =========================
+Carthage/Build/
+
+# =========================
+# Swift Package Manager
+# =========================
+.build/
+Package.resolved
+
+# =========================
+# SwiftLint cache
+# =========================
+.swiftlint.yml
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+
+# =========================
+# 환경 변수 파일
+# =========================
+.env
+
+# =========================
+# 테스트 / 시뮬레이터 관련
+# =========================
+*.simdevice
+*.simruntime
+*.xctest
