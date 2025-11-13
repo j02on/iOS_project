@@ -19,7 +19,7 @@ struct LoginView: View {
             }
             VStack(spacing: 12) {
                 ButtonField(children: "로그인")
-                NavigationLink(destination: LoginView()) {
+                NavigationLink(destination: SignupView()) {
                     Text("회원가입")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(Color(Colors.Gray.g600))

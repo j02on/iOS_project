@@ -12,7 +12,9 @@ struct iOS_projectApp: App {
 //    @StateObject var session = SessionManager()
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            NavigationStack {
+                LoginView()
+            }
         }
     }
 }
