@@ -3,6 +3,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var id : String = ""
     @State private var password : String = ""
+    @State private var isMain = false
     
     var body: some View {
         VStack(alignment: .leading,spacing: 64) {
@@ -18,7 +19,10 @@ struct LoginView: View {
                 InputField(label: "비밀번호", text: $password, placeholder: "비밀번호를 입력하세요", isPwd: true )
             }
             VStack(spacing: 12) {
-                ButtonField(children: "로그인")
+                ButtonField(children: "로그인", action: { isMain = true })
+                    .navigationDestination(isPresented: $isMain) {
+                        MainView()
+                    }
                 NavigationLink(destination: SignupView()) {
                     Text("회원가입")
                         .font(.system(size: 16, weight: .regular))
