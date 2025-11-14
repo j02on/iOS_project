@@ -21,7 +21,7 @@ struct MainView : View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
                     ForEach(planPosts) { post in
-                        PlanPostView(title: post.title, content: post.content, keyword: post.keyword, date: post.date, destination: {SignupView()})
+                        PostView(title: post.title, content: post.content, keyword: post.keyword, date: post.date, destination: {SignupView()})
                     }
                 }
             }
