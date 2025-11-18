@@ -9,8 +9,9 @@ struct MainView : View {
     ]
     var body : some View {
         VStack(alignment: .leading,spacing: 12) {
+            HeaderField()
             Text("여행 계획")
-                .font(.system(size: 24, weight: .semibold))
+                .font(.system(size: 20, weight: .semibold))
             HStack(spacing: 0) {
                 Text("\($planPosts.wrappedValue.count)")
                     .font(.system(size: 20, weight: .semibold))
@@ -21,7 +22,7 @@ struct MainView : View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
                     ForEach(planPosts) { post in
-                        PostView(title: post.title, content: post.content, keyword: post.keyword, date: post.date, destination: {SignupView()})
+                        PostView(title: post.title, content: post.content, keyword: post.keyword, date: post.date, destination: {PlanDetailView()})
                     }
                 }
             }
