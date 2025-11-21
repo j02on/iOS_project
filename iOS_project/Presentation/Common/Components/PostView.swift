@@ -3,7 +3,7 @@ import SwiftUI
 struct PostView<AnyView: View> : View {
     var title : String
     var content: String
-    var keyword: [String]
+    var keyword: [String]?
     var date: String
     var destination: () -> AnyView
     
