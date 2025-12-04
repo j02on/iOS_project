@@ -1,44 +1,9 @@
 import SwiftUI
 
-struct LogDataDto : Identifiable {
-    let id: Int
-    var title: String
-    var content: String
-    var date: String
-}
-
-struct PlanDetailView : View {
+struct LogDetailView : View {
     @State private var title : String = "title"
-    @State private var keyword : [String] = ["keyword", "keyword"]
     @State private var date : [String] = ["2024.12.12", "2024.12.14"]
     @State private var content: String = "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent"
-    
-    @State private var logDatas : [LogDataDto] = [
-        LogDataDto(
-            id: 1,
-            title: "sssasasasa",
-            content: "dasfghewsadfgwqerffgwqwsdef",
-            date: "2024.10.10"
-        ),
-        LogDataDto(
-            id: 2,
-            title: "sssasasasa",
-            content: "dasfghewsadfgwqerffgwqwsdef",
-            date: "2024.10.10"
-        ),
-        LogDataDto(
-            id: 3,
-            title: "sssasasasa",
-            content: "dasfghewsadfgwqerffgwqwsdef",
-            date: "2024.10.10"
-        ),
-        LogDataDto(
-            id: 4,
-            title: "sssasasasa",
-            content: "dasfghewsadfgwqerffgwqwsdef",
-            date: "2024.10.10"
-        )
-    ]
     
     @State private var isEditBtnClick: Bool = false
     @State private var isDelBtnClick: Bool = false
@@ -53,12 +18,6 @@ struct PlanDetailView : View {
                                 HStack {
                                     Text(title)
                                         .font(.system(size: 30, weight: .semibold))
-                                    
-                                    HStack {
-                                        ForEach(keyword, id: \.self) { keywordData in
-                                            KeywordField(text: keywordData)
-                                        }
-                                    }
                                 }
                                 HStack {
                                     Text(date[0])
@@ -71,23 +30,8 @@ struct PlanDetailView : View {
                                         .font(.system(size: 20))
                                         .foregroundColor(Colors.Gray.g600)
                                 }
+                                Text(content)
                             }
-                            
-                                VStack(alignment: .leading, spacing: 20) {
-                                    Text(content)
-                                    
-                                    Text("여행 일지")
-                                        .font(.system(size: 24, weight: .bold))
-                                    
-                                    ForEach(logDatas) { log in
-                                        PostView(
-                                            title: log.title,
-                                            content: log.content,
-                                            date: log.date,
-                                            destination: { LogDetailView() }
-                                        )
-                                    }
-                                }
                         }
                         .padding()
                         Spacer()
