@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		902823922EE1B75200B5B9C6 /* iOS_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902823862EE1B75200B5B9C6 /* iOS_projectApp.swift */; };
+		902823932EE1B75200B5B9C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902823852EE1B75200B5B9C6 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9007B2632EC497C9006E180D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,22 +32,55 @@
 		9007B2552EC497C8006E180D /* iOS_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9007B2622EC497C9006E180D /* iOS_projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_projectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9007B26C2EC497C9006E180D /* iOS_projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_projectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		902823852EE1B75200B5B9C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		902823862EE1B75200B5B9C6 /* iOS_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_projectApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		902823B82EE1BC4B00B5B9C6 /* Exceptions for "Presentation" folder in "iOS_project" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Common/Components/ButtonField.swift,
+				Common/Components/HeaderField.swift,
+				Common/Components/InputField.swift,
+				Common/Components/KeywordField.swift,
+				Common/Components/PostView.swift,
+				Screens/LoginView.swift,
+				Screens/MainView.swift,
+				Screens/PlanDetailView.swift,
+				Screens/SignupView.swift,
+			);
+			target = 9007B2542EC497C8006E180D /* iOS_project */;
+		};
+		902823B92EE1BC4B00B5B9C6 /* Exceptions for "Supporting" folder in "iOS_project" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Theme/Colors.swift,
+			);
+			target = 9007B2542EC497C8006E180D /* iOS_project */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9007B2572EC497C8006E180D /* iOS_project */ = {
+		9028239C2EE1BC4B00B5B9C6 /* Domain */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iOS_project;
+			path = Domain;
 			sourceTree = "<group>";
 		};
-		9007B2652EC497C9006E180D /* iOS_projectTests */ = {
+		902823A92EE1BC4B00B5B9C6 /* Presentation */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iOS_projectTests;
+			exceptions = (
+				902823B82EE1BC4B00B5B9C6 /* Exceptions for "Presentation" folder in "iOS_project" target */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		9007B26F2EC497C9006E180D /* iOS_projectUITests */ = {
+		902823AC2EE1BC4B00B5B9C6 /* Supporting */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iOS_projectUITests;
+			exceptions = (
+				902823B92EE1BC4B00B5B9C6 /* Exceptions for "Supporting" folder in "iOS_project" target */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,10 +113,12 @@
 		9007B24C2EC497C8006E180D = {
 			isa = PBXGroup;
 			children = (
-				9007B2572EC497C8006E180D /* iOS_project */,
-				9007B2652EC497C9006E180D /* iOS_projectTests */,
-				9007B26F2EC497C9006E180D /* iOS_projectUITests */,
 				9007B2562EC497C8006E180D /* Products */,
+				9028239C2EE1BC4B00B5B9C6 /* Domain */,
+				902823A92EE1BC4B00B5B9C6 /* Presentation */,
+				902823AC2EE1BC4B00B5B9C6 /* Supporting */,
+				902823852EE1B75200B5B9C6 /* Assets.xcassets */,
+				902823862EE1B75200B5B9C6 /* iOS_projectApp.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +148,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9007B2572EC497C8006E180D /* iOS_project */,
+				9028239C2EE1BC4B00B5B9C6 /* Domain */,
 			);
 			name = iOS_project;
 			packageProductDependencies = (
@@ -130,9 +170,6 @@
 			dependencies = (
 				9007B2642EC497C9006E180D /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				9007B2652EC497C9006E180D /* iOS_projectTests */,
-			);
 			name = iOS_projectTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +189,6 @@
 			);
 			dependencies = (
 				9007B26E2EC497C9006E180D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				9007B26F2EC497C9006E180D /* iOS_projectUITests */,
 			);
 			name = iOS_projectUITests;
 			packageProductDependencies = (
@@ -212,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902823932EE1B75200B5B9C6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902823922EE1B75200B5B9C6 /* iOS_projectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
