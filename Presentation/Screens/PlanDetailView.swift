@@ -84,7 +84,7 @@ struct PlanDetailView : View {
                                             title: log.title,
                                             content: log.content,
                                             date: log.date,
-                                            destination: { PlanDetailView() }
+                                            destination: { LogDetailView() }
                                         )
                                     }
                                 }
