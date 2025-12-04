@@ -45,6 +45,7 @@
 				Common/Components/InputField.swift,
 				Common/Components/KeywordField.swift,
 				Common/Components/PostView.swift,
+				Screens/LogDetailView.swift,
 				Screens/LoginView.swift,
 				Screens/MainView.swift,
 				Screens/PlanDetailView.swift,
